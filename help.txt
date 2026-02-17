@@ -1,0 +1,37 @@
+﻿/ping <time> [message] [snooze]
+Create a reminder.
+- Time formats: 10s, 5m, 2h, 1d
+- message is optional
+- snooze is optional: active or inactive
+
+Examples:
+- /ping 3d Take out the trash active
+- /ping 30m Check the oven
+
+When a reminder fires:
+- The bot sends: <message_link>: @you (so the mention always pings)
+- If snooze is active, footer shows: PingBot - Active Snooze
+- If a message was set, it appears in the embed
+
+Active snooze auto-repeat (if you do nothing):
+- after 10 minutes
+- then 1 hour
+- then 3 hours
+- then every 24 hours
+- auto-stops after 7 days
+
+Snooze controls on reminder message:
+- Don't snooze: stop future repeats
+- Dropdown: 1 hour, 24 hours, 48 hours (manual reschedule)
+
+/reminders
+Show your pending reminders.
+
+/cancel <id>
+Cancel one reminder by ID.
+
+/help
+Show this help message.
+
+Support:
+https://discord.gg/ffJNStGpy9
